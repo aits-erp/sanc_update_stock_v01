@@ -5,6 +5,17 @@ app_description = "custom update stock check box "
 app_email = "nikhil@aitsind.com"
 app_license = "mit"
 
+doc_events = {
+    "Sales Invoice": {
+        "before_validate": "custom_update_stock.custom_update_stock.sales.before_validate"
+    },
+    "Purchase Invoice": {
+        "before_validate": "custom_update_stock.custom_update_stock.purchase.before_validate"
+    }
+}
+
+
+
 # Apps
 # ------------------
 
